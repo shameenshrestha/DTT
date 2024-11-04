@@ -108,8 +108,8 @@ public class Client {
             System.out.print("Enter your message: ");
             int query = (int) Long.parseLong(scanner.nextLine());
             int query_org;
-              query = query_org = 1;
-              //query = query_org = 45960804421L;
+            query = query_org = 1;
+            //query = query_org = 45960804421L;
             System.out.println("Query received: " + query_org);
             byte[] result1 = null;
             byte[] result2 = null;
@@ -168,7 +168,7 @@ public class Client {
 
 
 
-           //Mod DTT
+            //Mod DTT
 
            /*  System.out.println("Starting MOD DTT");
 
@@ -194,7 +194,7 @@ public class Client {
                 }*/
 
 
-         //Simple DTT
+            //Simple DTT
             /* System.out.println("Starting Simple DTT");
             for (int i = 0; i < numBits; i++) {
                 T0[i][0] = (byte) (random.nextInt(100) + 1);
@@ -231,7 +231,7 @@ public class Client {
             // waiting for threads to complete
             result1 = futures[0].get();
             result2 = futures[1].get();
-           byte[] diff_count = readFromServer(inputStreamServer3); // Reading from Server 3
+            byte[] diff_count = readFromServer(inputStreamServer3); // Reading from Server 3
 
 
             networkTime.add(Instant.now());
@@ -245,17 +245,17 @@ public class Client {
             System.out.println("Network time at  execution:" + Helper.getTotalTime(networkTime));
 
             // Calculate and store processing time in the array
-             totalProcessingTimeList.add(Helper.getTotalTime(processingTime));
-             totalNetworkTimeList.add(Helper.getTotalTime(networkTime));
+            totalProcessingTimeList.add(Helper.getTotalTime(processingTime));
+            totalNetworkTimeList.add(Helper.getTotalTime(networkTime));
 
 
             executor.shutdown();
 
         }
 
-      // Calculate Average Processing and Network Time
-       double sumProcessingTime = 0; double sumNetworkTime = 0;
-       for (double processingTime1 : totalProcessingTimeList) {
+        // Calculate Average Processing and Network Time
+        double sumProcessingTime = 0; double sumNetworkTime = 0;
+        for (double processingTime1 : totalProcessingTimeList) {
             sumProcessingTime += processingTime1;
         }
         for (double networkTime1 : totalNetworkTimeList) {
